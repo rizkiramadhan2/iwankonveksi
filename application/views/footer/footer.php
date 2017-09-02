@@ -195,7 +195,7 @@
     
     <div class="footer-bottom">
         <div class="container">
-            <p style="font-size: 0.78em" class="pull-left">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> <br>Copyright © <span><a target="_blank" href="https://linkedin.com/in/rizki-ramadhan-4a3532148">Rdev</a></span> 2017. All right reserved. </p>
+            <p style="font-size: 0.78em" class="pull-left">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> <br>Copyright © <span><a target="_blank" href="https://linkedin.com/in/rizki-ramadhan-4a3532148">Iwan Konveksi</a></span> 2017. All right reserved. </p>
   
         </div>
     </div>
