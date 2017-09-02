@@ -141,7 +141,7 @@
 							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp +6281288167973
 							<br>
 							<br>
-							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  +628975670652 
+					
 						</p>
 						
 					</div>
