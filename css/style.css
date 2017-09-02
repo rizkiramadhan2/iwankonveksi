@@ -1,0 +1,102 @@
+ /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+  }
+  nav{
+    font-size: 1.06em;
+  }
+  .navbar-default {
+    background-color: #acb060 !important;
+    border: none!important;
+}
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+.header-container{
+    background-color: rgba(0, 0, 0, 1) !important;
+}
+ @media (max-width: 600px) {
+    .carousel-caption {
+      display: inherit !important;
+    }
+  }
+  .carousel-caption {
+    top: 30% !important;
+    bottom: auto !important;
+
+}
+.dim{
+  position: absolute !important;
+  color: white !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0.45 !important;
+  background-color: black !important;
+}
+.panel-primary {
+    border-color: #dddddd !important;
+}
+.panel-primary>.panel-heading {
+    color: #ffffff !important;
+    background-color: #acb060!important;
+    border-color: #ffffff!important;
+}
+.btn-default {
+    color: #fff!important;
+    background-color: #acb060!important;
+    border: none!important;
+}
+a{
+  outline: none !important;
+}
+a:focus{
+  outline: none !important;
+}
+.form-control{
+  height: 31px!important;
+}
+.form-control-custom {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.btn:focus,.btn:active {
+   outline: none !important;
+}
