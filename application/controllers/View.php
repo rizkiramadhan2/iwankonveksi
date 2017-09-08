@@ -9,7 +9,6 @@ class View extends CI_Controller {
     $this->load->model('Model');
     $date=date("Y-m-d", strtotime('+7 hours'));
  	$result= $this->Model->read('visitor', "time LIKE '%$date%'");
- 	print_r($date);
    	$this->session->set_flashdata('visitor', count($result));
     if(!$this->session->tempdata('user')){
     	$this->Model->create('visitor',$arrayName = array('ip'=>$_SERVER['REMOTE_ADDR'],'ua'=>$_SERVER['HTTP_USER_AGENT']));
