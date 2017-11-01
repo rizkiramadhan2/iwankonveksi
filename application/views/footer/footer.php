@@ -165,7 +165,7 @@
                 </div>
                 <div class="col-lg-5  col-md-5 col-sm-4 col-xs-6">
                     <h3> Alamat </h3>
-                    <p>Perum. Alamsari No. 02 Gentingan Merjosari, Malang. +6281288167973</p>
+                    <p>Perum. Permata Kencana Saxophone No. 19, Malang. +6281288167973</p>
                 </div>
                 <div class="col-lg-3  col-md-3 col-sm-4 col-xs-6 ">
                     <h3>Info lebih</h3>
