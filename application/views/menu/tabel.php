@@ -14,14 +14,7 @@
                     </span>
                 </div>
                 <br>
-           <!--     <div class="input-group">
-            <select name="category" class="form-control" id="sel1">
-              <option <?php //if(strpos(current_url(),"baju")!==false) echo 'selected' ?> value="baju">Baju & Kemeja</option>
-              <option <?php// if(strpos(current_url(),"kaos")!==false) echo 'selected' ?> value="kaos">Kaos</option>
-              <option <?php //if(strpos(current_url(),"jaket-singleside")!==false) echo 'selected' ?> value="jaket-singleside">Jaket Singleside</option>
-              <option <?php //if(strpos(current_url(),"jaket-doubleside")!==false) echo 'selected' ?> value="jaket-doubleside">Jaket Doubleside</option>
-            </select>
-                </div>-->
+           
             </form>
         </div>
 		<div class="col-md-9">
