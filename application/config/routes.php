@@ -82,6 +82,9 @@ $route['kontak'] = 'view/v_kontak';
 //footer-visitor
 $route['lookup_visitor']= 'view/visitor';
 
+//admin
+$route['admin']= 'view/admin';
+
 
 
 $route['default_controller'] = 'view';

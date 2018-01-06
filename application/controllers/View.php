@@ -7,12 +7,15 @@ class View extends CI_Controller {
     parent::__construct();
   //  $this->load->database();
     $this->load->model('Model');
-    $date=date("Y-m-d", strtotime('+7 hours'));
- 	$result= $this->Model->read('visitor', "time LIKE '%$date%'");
+    setlocale(LC_TIME, "id_ID");
+date_default_timezone_set('Asia/Jakarta');
+    $date=date('Y-m-d H:i:s');
+ 	$result= $this->Model->read('visitor', "waktu LIKE '%$date%'");
    	$this->session->set_flashdata('visitor', count($result));
     if(!$this->session->tempdata('user')){
     	$this->Model->create('visitor',$arrayName = array('ip'=>$_SERVER['REMOTE_ADDR'],'ua'=>$_SERVER['HTTP_USER_AGENT']));
-    	$this->db->query("UPDATE visitor set time=(SELECT CURRENT_TIMESTAMP + interval 7 hour) ORDER BY id DESC LIMIT 1  ");
+    	$q = "UPDATE visitor set waktu='".$date."' ORDER BY id DESC LIMIT 1 " ;
+    	$this->db->query($q);
     	$_SESSION['user'] = true;
 		$this->session->mark_as_temp('user', 600);
     }
@@ -113,9 +116,14 @@ class View extends CI_Controller {
 
 	//Visitor
 	public function visitor(){
-		$date=date("Y-m-d", strtotime('+7 hours'));
- 		$result= $this->Model->read('visitor', "time LIKE '%$date%'");
+		$date=date('Y-m-d');
+ 		$result= $this->Model->read('visitor', "waktu LIKE '%$date%'");
    		$this->load->view('visitor',$arrayName = array('total' => count($result) ));
+	}
+
+	//Admin
+	public function admin(){
+   		$this->load->view('admin/default');
 	}
 
 }
