@@ -10,7 +10,8 @@ class View extends CI_Controller {
     setlocale(LC_TIME, "id_ID");
 date_default_timezone_set('Asia/Jakarta');
     $date=date('Y-m-d H:i:s');
- 	$result= $this->Model->read('visitor', "waktu LIKE '%$date%'");
+    $date2=date('Y-m-d');
+ 	$result= $this->Model->read('visitor', "waktu LIKE '%$date2%'");
    	$this->session->set_flashdata('visitor', count($result));
     if(!$this->session->tempdata('user')){
     	$this->Model->create('visitor',$arrayName = array('ip'=>$_SERVER['REMOTE_ADDR'],'ua'=>$_SERVER['HTTP_USER_AGENT']));
@@ -121,9 +122,6 @@ date_default_timezone_set('Asia/Jakarta');
    		$this->load->view('visitor',$arrayName = array('total' => count($result) ));
 	}
 
-	//Admin
-	public function admin(){
-   		$this->load->view('admin/default');
-	}
+	
 
 }
