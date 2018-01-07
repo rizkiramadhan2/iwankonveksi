@@ -27,9 +27,54 @@ class Admin extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home');
+		$this->load->view('admin/admin-home');
 	}
+	//Halaman Admin login
+	public function login(){
+   		$this->load->view('admin/login');
+	}
+	//login
+	public function auth(){
+		if(isset($_POST['submit'])){
+			$this->form_validation->set_rules('username','Username','required');
+			$this->form_validation->set_rules('password','Password','required|min_length[3]');
+			if($this->form_validation->run()){
+				$data_user = array('username' => $_POST['username'], 'password' => md5($_POST['password']) );
+				$this->load->model('Model');
 
+				//invoke read function from model
+				$result = $this->Model->read('db_iwknv',$data_user);
+
+				if (count($result)==1) {
+
+					//$_SESSION['login']=$result[0]['username'];
+					//$_SESSION['id_admin']=$result[0]['id_admin'];
+					$this->index();
+					// if($result[0]['is_admin']==1){
+					// 	$_SESSION['is_admin']=true;
+					// 	redirect(base_url().'admin', 'refresh');
+					// }
+					// else{
+					// 	$_SESSION['is_admin']=false;
+					// 	$this->load->view('home');
+					// }
+				}
+				else{
+					$invalid_login = array('data' => 'Gagal Login, Username atau Password Salah!' );
+					$this->load->view('admin/login',$invalid_login);
+				}
+
+			}
+			else{
+				$data = array('error' => true );
+				$this->load->view('login',$data);
+			}
+		//	echo "yes";
+		}else{
+			//$this->load->view('login');
+		}
+		
+	}
 
 	
 

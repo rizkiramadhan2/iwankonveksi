@@ -83,7 +83,9 @@ $route['kontak'] = 'view/v_kontak';
 $route['lookup_visitor']= 'view/visitor';
 
 //admin
-$route['admin']= 'view/admin';
+$route['login']= 'admin/login';
+$route['auth']= 'admin/auth';
+$route['dashboard']= 'admin/index';
 
 
 
