@@ -23,6 +23,10 @@
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'css/font-awesome.css'?>">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+      <!-- Generic page styles -->
+<link rel="stylesheet" href="css/style-file.css">
+      <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+<link rel="stylesheet" href="css/jquery.fileupload.css">
   
   
   
@@ -48,7 +52,7 @@
                         <div class="hamburger-icon"></div>
                     </button>
 
-                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="#" data-toggle="dropdown-submenu" aria-expanded="false">DESAIN</a><div class="dropdown-menu"><a class="dropdown-item" href="#">Desain Terbaru</a><a class="dropdown-item" href="#"></a><a class="dropdown-item" href="#" aria-expanded="true">Semua Desain</a></div></li><li class="nav-item"><a class="nav-link link" href="#">GALERI</a></li><li class="nav-item"><a class="nav-link link" href="#">PRODUK</a></li><li class="nav-item"><a class="nav-link link" href="#">KONTAK</a></li><li class="nav-item"><a class="nav-link link" href="#">PEMESANAN</a></li><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="#" data-toggle="dropdown-submenu" aria-expanded="false">ADMIN</a><div class="dropdown-menu"><a class="dropdown-item" href="#">New Item</a><a class="dropdown-item" href="#" aria-expanded="false">Logout</a></div></li></ul>
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="#" data-toggle="dropdown-submenu" aria-expanded="false">DESAIN</a><div class="dropdown-menu"><a class="dropdown-item" href="#">Desain Terbaru</a><a class="dropdown-item" href="#"></a><a class="dropdown-item" href="#" aria-expanded="true">Semua Desain</a></div></li><li class="nav-item"><a class="nav-link link" href="#">GALERI</a></li><li class="nav-item"><a class="nav-link link" href="#">PRODUK</a></li><li class="nav-item"><a class="nav-link link" href="#">KONTAK</a></li><li class="nav-item"><a class="nav-link link" href="#">PEMESANAN</a></li><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="#" data-toggle="dropdown-submenu" aria-expanded="false"><?php echo 'Hai '.$_SESSION['login'] ?></a><div class="dropdown-menu"><a class="dropdown-item" href="#">New Item</a><a class="dropdown-item" href="<?php echo base_url('logout') ?>" aria-expanded="false">Logout</a></div></li></ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
                     </button>
@@ -61,9 +65,28 @@
 
 </section>
 
-<section class="engine"><a href="https://mobirise.co/o">bootstrap buttons</a></section><section class="mbr-gallery mbr-section mbr-section-nopadding mbr-slider-carousel mbr-after-navbar" data-filter="true" id="gallery4-4" data-rv-view="79" style="padding-top: 6rem; padding-bottom: 0rem;">
+<section class="engine"><a href="#">bootstrap buttons</a></section><section class="mbr-gallery mbr-section mbr-section-nopadding mbr-slider-carousel mbr-after-navbar" data-filter="true" id="gallery4-4" data-rv-view="79" style="padding-top: 6rem; padding-bottom: 0rem;">
+  <div class="container">
+    <!-- The fileinput-button span is used to style the file input field as button -->
+    <span class="btn btn-success fileinput-button">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>Unggah Desain...</span>
+        <!-- The file input field used as target for the file upload widget -->
+        <input id="fileupload" type="file" name="files[]" multiple>
+    </span>
+    <br>
+    <br>
+    <!-- The global progress bar -->
+    <div id="progress" class="progress">
+        <div class="progress-bar progress-bar-success"></div>
+    </div>
+    <!-- The container for the uploaded files -->
+    <div id="files" class="files"></div>
+  </div>
     <!-- Filter -->
+    <hr>
     <div class="mbr-gallery-filter container gallery-filter-active">
+    <h4>Daftar Desain</h4>
         <ul>
             <li class="mbr-gallery-filter-all active">All</li>
         </ul>
@@ -73,110 +96,15 @@
     <div class="mbr-gallery-row">
         <div class="mbr-gallery-layout-default">
             <div>
-                <div>
-                    <div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Animated">
-                        <div href="#lb-gallery4-4" >
-                            
-                            
-
-                            <img src="assets/images/working-area-small.jpg" alt="">
-                            
-                            <span class=""></span>
-                            
-                        </div>
+                <div class="list-desain">
+                <div  class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="kaos">
+                        
                     </div>
-
-                    <div class="gambar mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Awesome">
-                        <div href="#lb-gallery4-4" data-slide-to="0" data-toggle="modal">
-                            
-                            
-
-                            <img src="assets/images/bike-small.jpg" alt="">
-                            
-                            <span class="icon-focus"></span>
-                            
-                        </div>
-                    </div><div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Responsive">
-                        <div href="#lb-gallery4-4" data-slide-to="1" data-toggle="modal">
-                            
-                            
-
-                            <img src="assets/images/code-man-small.jpg" alt="">
-                            
-                            <span class="icon-focus"></span>
-                            
-                        </div>
-                    </div><div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Creative">
-                        <div href="#lb-gallery4-4" data-slide-to="2" data-toggle="modal">
-                            
-                            
-
-                            <img src="assets/images/coworkers-small.jpg" alt="">
-                            
-                            <span class="icon-focus"></span>
-                            
-                        </div>
-                    </div><div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Animated">
-                        <div href="#lb-gallery4-4" data-slide-to="3" data-toggle="modal">
-                            
-                            
-
-                            <img src="assets/images/desktop-small.jpg" alt="">
-                            
-                            <span class="icon-focus"></span>
-                            
-                        </div>
-                    </div><div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Awesome">
-                        <div href="#lb-gallery4-4" data-slide-to="4" data-toggle="modal">
-                            
-                            
-
-                            <img src="assets/images/room-laptop-small.jpg" alt="">
-                            
-                            <span class="icon-focus"></span>
-                            
-                        </div>
-                    </div><div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Beautiful">
-                        <div href="#lb-gallery4-4" data-slide-to="5" data-toggle="modal">
-                            
-                            
-
-                            <img src="assets/images/table-small.jpg" alt="">
-                            
-                            <span class="icon-focus"><i class="">xdvdfjbn</i></span>
-                            
-                        </div>
-                    </div><div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Responsive">
-                        <div href="#lb-gallery4-4" data-slide-to="6" data-toggle="modal">
-                            
-                            
-
-                            <img src="assets/images/windows-books-small.jpg" alt="">
-                            
-                            <span class="icon-focus"></span>
-                            
-                        </div>
-                    </div><div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Animated">
-                        <div href="#lb-gallery4-4" data-slide-to="7" data-toggle="modal">
-                            
-                            
-
-                            <img src="assets/images/working-area-small.jpg" alt="">
-                            
-                            <span class="icon-focus"></span>
-                            
-                        </div>
+                    <div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="kemeja">
+                       
                     </div>
-                    <div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="Animated">
-                        <div href="#lb-gallery4-4" >
-                            
-                            
-
-                            <img src="assets/images/working-area-small.jpg" alt="">
-                            
-                            <span class=""></span>
-                            
-                        </div>
+                    <div  class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="unlabeled">
+                       
                     </div>
                 </div>
             </div>
@@ -189,36 +117,11 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <ol class="carousel-indicators">
-                        <li data-app-prevent-settings="" data-target="#lb-gallery4-4" class=" active" data-slide-to="0"></li><li data-app-prevent-settings="" data-target="#lb-gallery4-4" data-slide-to="1"></li><li data-app-prevent-settings="" data-target="#lb-gallery4-4" data-slide-to="2"></li><li data-app-prevent-settings="" data-target="#lb-gallery4-4" data-slide-to="3"></li><li data-app-prevent-settings="" data-target="#lb-gallery4-4" data-slide-to="4"></li><li data-app-prevent-settings="" data-target="#lb-gallery4-4" data-slide-to="5"></li><li data-app-prevent-settings="" data-target="#lb-gallery4-4" data-slide-to="6"></li><li data-app-prevent-settings="" data-target="#lb-gallery4-4" data-slide-to="7"></li>
-                    </ol>
+                   
                     <div class="carousel-inner">
-                        <div  class="carousel-item active">
-                            <img data-id="1" src="assets/images/bike.jpg" alt="">
-                        </div><div class="carousel-item">
-                            <img data-id="2" src="assets/images/code-man.jpg" alt="">
-                        </div><div class="carousel-item">
-                            <img src="assets/images/coworkers.jpg" alt="">
-                        </div><div class="carousel-item">
-                            <img src="assets/images/desktop.jpg" alt="">
-                        </div><div class="carousel-item">
-                            <img src="assets/images/room-laptop.jpg" alt="">
-                        </div><div class="carousel-item">
-                            <img src="assets/images/table.jpg" alt="">
-                        </div><div class="carousel-item">
-                            <img src="assets/images/windows-books.jpg" alt="">
-                        </div><div class="carousel-item">
-                            <img src="assets/images/working-area.jpg" alt="">
-                        </div>
+                        
                     </div>
-                    <a class="left carousel-control" role="button" data-slide="prev" href="#lb-gallery4-4">
-                        <span class="icon-prev" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" role="button" data-slide="next" href="#lb-gallery4-4">
-                        <span class="icon-next" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    
 
                     <a class="delete close fa fa-trash-o" >
                     </a>
@@ -243,29 +146,101 @@
   <script src="assets/mobirise-gallery/player.min.js"></script>
   <script src="assets/mobirise-gallery/script.js"></script>
 
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="js/jquery.fileupload.js"></script>
+<!-- The File Upload processing plugin -->
+<script src="js/jquery.fileupload-process.js"></script>
+<!-- The File Upload image preview & resize plugin -->
+<script src="js/jquery.fileupload-image.js"></script>
+<!-- The File Upload audio preview plugin -->
+<script src="js/jquery.fileupload-audio.js"></script>
+<!-- The File Upload video preview plugin -->
+<script src="js/jquery.fileupload-video.js"></script>
+<!-- The File Upload validation plugin -->
+<script src="js/jquery.fileupload-validate.js"></script>
+
+<script src="js/desain-file-handler.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
   
   <script type="text/javascript">
+    $(document).ready(
+    function(){
+    $.ajax({
+          type: "POST",
+          url: "<?php echo base_url('get/api/desain')?>",
+          success: function(data) {
+        decoded_data =  atob(data);
+        console.log(decoded_data);
+        $.each(JSON.parse(decoded_data), function(idx, obj) {
+          
+          var label = obj.label;
+          if (obj.label=="") {
+            label = "unlabeled"
+          }
+
+          $("div.list-desain").prepend('<div class="g'+obj.id_photo+' mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-video-url="false" data-tags="'+label+'"><div href="#lb-gallery4-4" data-slide-to="'+ idx +'" data-toggle="modal"><img src="'+obj.path+'" alt=""><span class="icon-focus"></span></div></div>'
+            );
+
+        
+         
+          if (idx==0) {
+             $("div.carousel-inner").append('<div class="carousel-item active"><img data-id="'+ obj.id_photo +'" src="'+obj.path+'" alt=""></div>'
+            );
+          }else{
+          $("div.carousel-inner").append('<div class="carousel-item"><img data-id="'+ obj.id_photo +'" src="'+obj.path+'" alt=""></div>'
+            );
+        }
+        
+        });
+          }
+        });
+      });
     $(document).on('click', "a.delete", function() {
-        console.log($('.active').children().data('id'));
+       // console.log($('.active').children().data('id'));
+        var i = $('.active').children().data('id');
+        var s = $('.active').children().attr('src');
         $.confirm({
     title: 'Confirm!',
-    content: 'Ingin menghapus gambar!',
+    content: 'Ingin menghapus gambar?',
     buttons: {
         confirm: function () {
-            $('.gambar').remove();
-            $('.modal').hide();
-            $('.modal-backdrop').hide();
-            $.alert('Confirmed!');
+            
+            deletePict(i,s);
+           
+            // $('.modal').hide();
+            // $('.modal-backdrop').hide();
+            $.alert('Gambar terhapus');
         },
         cancel: function () {
-            $.alert('Canceled!');
+            $.alert('Dibatalkan');
         }
     }
 });
       });
+    function deletePict(id,sr){
+      $.ajax({
+      url: "<?php echo base_url('delete/desain') ?>",
+      type: "POST",
+      data:'id='+id+'&path='+sr,
+      success: function(data){
+          $('.g'+id).remove();
+               $('.modal').modal('toggle');
+      }        
+     }); 
+    }
     
   </script>
+
+
   <input name="animation" type="hidden">
   </body>
 </html>

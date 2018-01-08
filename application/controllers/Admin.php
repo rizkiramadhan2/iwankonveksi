@@ -7,6 +7,8 @@ class Admin extends CI_Controller {
     parent::__construct();
   //  $this->load->database();
     $this->load->model('Model');
+    // $key = base64_encode($_SESSION['__ci_last_regenerate']);
+   	// print_r(substr($key,0,-2));
    
 }
 
@@ -27,10 +29,16 @@ class Admin extends CI_Controller {
 	 */
 	public function index()
 	{
+		if (!isset($_SESSION['login'])) {
+    	redirect(base_url('login'));
+    	}
 		$this->load->view('admin/admin-home');
 	}
 	//Halaman Admin login
 	public function login(){
+		if (isset($_SESSION['login'])) {
+    	redirect(base_url('dashboard'));
+    	}
    		$this->load->view('admin/login');
 	}
 	//login
@@ -47,17 +55,9 @@ class Admin extends CI_Controller {
 
 				if (count($result)==1) {
 
-					//$_SESSION['login']=$result[0]['username'];
+					$_SESSION['login']=$result[0]['username'];
 					//$_SESSION['id_admin']=$result[0]['id_admin'];
-					$this->index();
-					// if($result[0]['is_admin']==1){
-					// 	$_SESSION['is_admin']=true;
-					// 	redirect(base_url().'admin', 'refresh');
-					// }
-					// else{
-					// 	$_SESSION['is_admin']=false;
-					// 	$this->load->view('home');
-					// }
+					redirect(base_url('dashboard'));
 				}
 				else{
 					$invalid_login = array('data' => 'Gagal Login, Username atau Password Salah!' );
@@ -69,13 +69,60 @@ class Admin extends CI_Controller {
 				$data = array('error' => true );
 				$this->load->view('login',$data);
 			}
-		//	echo "yes";
-		}else{
-			//$this->load->view('login');
 		}
 		
 	}
 
+	public function list_desain(){
+		//$base_key = base64_encode($_SESSION['__ci_last_regenerate']);
+		$arr ="";
+		//if ($key.'=='==$base_key) {
+			$result = $this->Model->read('tb_desain');
+			foreach ($result as $row) {
+				$obj = new stdClass();
+				$obj->id_photo = $row['id_photo'];
+				$obj->path = $row['path'];
+				$obj->label = $row['label'];
+				$obj->time = $row['time'];
+				$arr[]=$obj;
+				
+			}
+			$myJSON = json_encode($arr);
+			$desain= base64_encode($myJSON);
+			echo $desain;
+			//echo $myJSON;
+			
+		//}
+		// else{
+		// 	echo "Forbidden to access this link";
+		// }
+	}
+
+	public function delete(){
+		if (isset($_POST['id'])) {
+			$id = array('id_photo'=> $_POST['id']);
+			$src = trim($_POST['path'],base_url());
+			print_r(unlink('./i'.$src));
+			$this->Model->delete('tb_desain',$id);		}	
+	}
+
+	public function upload_desain(){
+		if (isset($_POST['path'])) {
+			$data = array('path'=>$_POST['path'],'label'=>$_POST['label']);
+			$this->Model->create('tb_desain',$data);	
+		}	
+	}
+
+
+
+
+	//logout admin
+	public function logout(){
+		unset($_SESSION['login']);
+		//unset($_SESSION['id_aktor']);
+		session_destroy();
+		$this->login();
+	}
 	
 
 }

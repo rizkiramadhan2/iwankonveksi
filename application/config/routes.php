@@ -84,8 +84,13 @@ $route['lookup_visitor']= 'view/visitor';
 
 //admin
 $route['login']= 'admin/login';
+$route['logout']= 'admin/logout';
 $route['auth']= 'admin/auth';
 $route['dashboard']= 'admin/index';
+$route["get/api/desain"]= 'admin/list_desain';
+$route["delete/desain"]= 'admin/delete';
+$route["upload/desain"]= 'admin/upload_desain';
+
 
 
 
