@@ -234,6 +234,9 @@
       success: function(data){
           $('.g'+id).remove();
                $('.modal').modal('toggle');
+               var x = $("div.list-desain").html();
+               $("div.list-desain").html("");
+               $("div.list-desain").html(x);
       }        
      }); 
     }
