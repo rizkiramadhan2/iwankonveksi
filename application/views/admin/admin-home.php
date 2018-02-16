@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Site made with Mobirise Website Builder v4.4.1, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.4.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta name="description" content="Site Generator Description">
-  <title>Page 1</title>
+  <title>Desain</title>
   <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
   <link rel="stylesheet" href="assets/et-line-font-plugin/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
@@ -52,7 +51,7 @@
                         <div class="hamburger-icon"></div>
                     </button>
 
-                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="#" data-toggle="dropdown-submenu" aria-expanded="false">DESAIN</a><div class="dropdown-menu"><a class="dropdown-item" href="#">Desain Terbaru</a><a class="dropdown-item" href="#"></a><a class="dropdown-item" href="#" aria-expanded="true">Semua Desain</a></div></li><li class="nav-item"><a class="nav-link link" href="#">GALERI</a></li><li class="nav-item"><a class="nav-link link" href="#">PRODUK</a></li><li class="nav-item"><a class="nav-link link" href="#">KONTAK</a></li><li class="nav-item"><a class="nav-link link" href="#">PEMESANAN</a></li><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="#" data-toggle="dropdown-submenu" aria-expanded="false"><?php echo 'Hai '.$_SESSION['login'] ?></a><div class="dropdown-menu"><a class="dropdown-item" href="#">New Item</a><a class="dropdown-item" href="<?php echo base_url('logout') ?>" aria-expanded="false">Logout</a></div></li></ul>
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item"><a class="nav-link link" href="<?php base_url('dashboard') ?>" >DESAIN</a></li><li class="nav-item"><a class="nav-link link" href="#">GALERI</a></li><li class="nav-item"><a class="nav-link link" href="#">PRODUK</a></li><li class="nav-item"><a class="nav-link link" href="#">KONTAK</a></li><li class="nav-item"><a class="nav-link link" href="#">PEMESANAN</a></li><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="#" data-toggle="dropdown-submenu" aria-expanded="false"><?php echo 'Hai '.$_SESSION['login'] ?></a><div class="dropdown-menu"><a class="dropdown-item" href="#">New Item</a><a class="dropdown-item" href="<?php echo base_url('logout') ?>" aria-expanded="false">Logout</a></div></li></ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
                     </button>
@@ -202,8 +201,8 @@
         
         });
           }
-        });
-      });
+    });
+    });
     $(document).on('click', "a.delete", function() {
        // console.log($('.active').children().data('id'));
         var i = $('.active').children().data('id');

@@ -73,6 +73,7 @@ class Admin extends CI_Controller {
 		
 	}
 
+	//JSON DESAIN
 	public function list_desain(){
 		//$base_key = base64_encode($_SESSION['__ci_last_regenerate']);
 		$arr ="";
@@ -96,6 +97,23 @@ class Admin extends CI_Controller {
 		// else{
 		// 	echo "Forbidden to access this link";
 		// }
+	}
+
+	public function list_galeri(){
+		$arr ="";
+			$result = $this->Model->read('tb_galeri');
+			foreach ($result as $row) {
+				$obj = new stdClass();
+				$obj->id_photo = $row['id_photo'];
+				$obj->path = base_url('img/galeri/').$row['path'];
+				$obj->label = $row['label'];
+				$obj->time = $row['time'];
+				$arr[]=$obj;
+				
+			}
+			$myJSON = json_encode($arr);
+			$desain= base64_encode($myJSON);
+			echo $desain;
 	}
 
 	public function delete(){

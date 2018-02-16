@@ -88,6 +88,7 @@ $route['logout']= 'admin/logout';
 $route['auth']= 'admin/auth';
 $route['dashboard']= 'admin/index';
 $route["get/api/desain"]= 'admin/list_desain';
+$route["get/api/galeri"]= 'admin/list_galeri';
 $route["delete/desain"]= 'admin/delete';
 $route["upload/desain"]= 'admin/upload_desain';
 

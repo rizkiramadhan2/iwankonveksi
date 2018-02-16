@@ -30,91 +30,7 @@
 <h2>Galeri</h2>
 <h5>Berikut beberapa produk yang sudah pernah dibuat dan didesain</h5><hr>
   <div class="row portfolio">
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/1.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/2.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/3.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/4.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/5.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/6.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/7.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/8.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/9.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/10.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/11.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/12.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/13.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/14.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/15.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/16.png' ?>">
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img class="img-responsive" src="<?php echo base_url().'img/galeri/17.png' ?>">
-      </div>
-    </div>
+    
     <!--<div class="col-sm-6 col-md-3">
       <div class="thumbnail">
         <img class="img-responsive" src="https://placehold.it/420x340?text=UKURAN 420x340" alt="The awesome description" data-toggle="modal" data-target="#myModal">
@@ -141,9 +57,26 @@
       </div>
     </div>
   </div>
-</div></div
+</div></div>
   <?php $this->load->view('footer/footer') ?>
 <?php $this->load->view('assets-js') ?>
+<script>
+    $(document).ready(
+    function(){
+    $.ajax({
+          type: "POST",
+          url: "<?php echo base_url('get/api/galeri')?>",
+          success: function(data) {
+            decoded_data =  atob(data);
+            console.log(decoded_data);
+            $.each(JSON.parse(decoded_data), function(idx, obj) {
+              $("div.portfolio").prepend('<div class="col-sm-6 col-md-3"><div class="thumbnail"><img class="img-responsive" src="'+obj.path+'"></div></div>'
+                );            
+            });
+          }
+    });
+    });
+  </script>
 
 </body>
 </html>
