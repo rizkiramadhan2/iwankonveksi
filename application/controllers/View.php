@@ -122,6 +122,9 @@ date_default_timezone_set('Asia/Jakarta');
    		$this->load->view('visitor',$arrayName = array('total' => count($result) ));
 	}
 
-	
+	//View baru
+	public function v_home(){
+		$this->load->view('new/index');
+	}
 
 }

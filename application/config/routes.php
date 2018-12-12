@@ -92,7 +92,7 @@ $route["get/api/galeri"]= 'admin/list_galeri';
 $route["delete/desain"]= 'admin/delete';
 $route["upload/desain"]= 'admin/upload_desain';
 
-
+$route['baru'] = 'view/v_home';
 
 
 $route['default_controller'] = 'view';
