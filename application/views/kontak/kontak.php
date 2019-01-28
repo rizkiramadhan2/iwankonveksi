@@ -157,7 +157,7 @@
 					<div class="info">
 						<h3 class="title">Alamat</h3>
     					<p>
-							 <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp Perum. Permata Kencana Saxophone No. 19, Malang
+							 <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp Perumahan Griya Permata Alam Blok F No.2, Karangploso, Malang 
 						</p>
 					</div>
 				</div>
@@ -177,7 +177,7 @@
     </div>
    	<hr>
     	<div class="col-sm-6">
-    	<iframe width="100%" height="320px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.9303520064661!2d112.60319912605325!3d-7.924139981088396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78821db9bdd717%3A0xebb03ae1f3e5e880!2sPerumahan+Permata+Kencana+Saxofone!5e0!3m2!1sid!2sid!4v1509561691557" allowfullscreen></iframe>
+    	<iframe width="100%" height="320px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.0039289676281!2d112.60718982917663!3d-7.893423999644574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTMnMzYuMyJTIDExMsKwMzYnMjcuOSJF!5e0!3m2!1sen!2sid!4v1548681622596" allowfullscreen></iframe>
     	</div>
     	
     		<h3 class="hidden-sm hidden-md hidden-lg header-title"> Pesan </h3>
