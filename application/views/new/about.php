@@ -1,52 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Strategy &mdash; Free Portfolio Template by Colorlib</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/aos.min.css">
-    <link rel="stylesheet" href="css/hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="css/animsition.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" href="css/style.css">
+    <?php $this->load->view('new/assets-css') ?>
   </head>
   <body>
   
   <div class="js-animsition animsition" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out">
 
-    <header class="templateux-navbar navbar-light"  data-aos="fade-down">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-3 col-3"><div class="site-logo"><a href="index.html" class="animsition-link">Strategy</a></div></div>
-          <div class="col-sm-9 col-9 text-right">
-            <button class="hamburger hamburger--spin toggle-menu ml-auto js-toggle-menu" type="button">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>  
+   <?php $this->load->view('new/header') ?>
 
-            <nav class="templateux-menu js-templateux-menu" role="navigation">
-              <ul class="list-unstyled">
-                <li class="d-md-none d-block"><a href="index.html" class="animsition-link">Home</a></li>
-                <li><a href="work.html" class="animsition-link">Work</a></li>
-                <li class="active"><a href="about.html" class="animsition-link">About</a></li>
-                <li><a href="blog.html" class="animsition-link">Blog</a></li>
-                <li><a href="contact.html" class="animsition-link">Contact</a></li>
-              </ul>
-            </nav>  
-          </div>
-        </div>
-      </div>
-    </header>
 
     <!-- END templateux-navbar -->
     <section class="templateux-hero overlay"  data-scrollax-parent="true">
-      <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="images/hero_2.jpg" /></div>
+      <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="<?=base_url()?>images2/hero_2.jpg" /></div>
 
       <div class="container">
         <div class="row align-items-center justify-content-center intro">
@@ -88,7 +54,7 @@
             <div class="block-38 ">
               <div class="block-38-img">
                 <div class="block-38-header">
-                  <img src="images/person_1.jpg" alt="Image placeholder">
+                  <img src="<?=base_url()?>images2/person_1.jpg" alt="Image placeholder">
                   <h3 class="block-38-heading">Elizabeth Graham</h3>
                   <p class="block-38-subheading">CEO, Founder</p>
                 </div>
@@ -102,7 +68,7 @@
             <div class="block-38 ">
               <div class="block-38-img">
                 <div class="block-38-header">
-                  <img src="images/person_2.jpg" alt="Image placeholder">
+                  <img src="<?=base_url()?>images2/person_2.jpg" alt="Image placeholder">
                   <h3 class="block-38-heading">Amanda Gold</h3>
                   <p class="block-38-subheading">Co-Founder</p>
                 </div>
@@ -116,7 +82,7 @@
             <div class="block-38 ">
               <div class="block-38-img">
                 <div class="block-38-header">
-                  <img src="images/person_3.jpg" alt="Image placeholder">
+                  <img src="<?=base_url()?>images2/person_3.jpg" alt="Image placeholder">
                   <h3 class="block-38-heading">Chris Stanworth</h3>
                   <p class="block-38-subheading">Co-Founder</p>
                 </div>
@@ -133,9 +99,9 @@
         <div class="row">
           <div class="col-md-12" data-aos="fade-up">
             <div class="owl-carousel dots-overlap wide-slider">
-              <div class="item"><img src="images/hero_1.jpg" alt="Free Template" class="img-fluid"></div>
-              <div class="item"><img src="images/hero_2.jpg" alt="Free Template" class="img-fluid"></div>
-              <div class="item"><img src="images/hero_3.jpg" alt="Free Template" class="img-fluid"></div>
+              <div class="item"><img src="<?=base_url()?>images2/hero_1.jpg" alt="Free Template" class="img-fluid"></div>
+              <div class="item"><img src="<?=base_url()?>images2/hero_2.jpg" alt="Free Template" class="img-fluid"></div>
+              <div class="item"><img src="<?=base_url()?>images2/hero_3.jpg" alt="Free Template" class="img-fluid"></div>
             </div>
           </div>
         </div>
@@ -264,8 +230,7 @@
   </div>
 
   
-  <script src="js/scripts-all.js"></script>
-  <script src="js/main.js"></script>
+ <?php $this->load->view('new/assets-js') ?>
   
   </body>
 </html>

@@ -1,48 +1,12 @@
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Strategy &mdash; Free Portfolio Template by Colorlib</title>
-    <link rel="stylesheet" href="./application/views/new/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./application/views/new/css/aos.min.css">
-    <link rel="stylesheet" href="./application/views/new/css/hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" href="./application/views/new/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./application/views/new/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="./application/views/new/css/animsition.min.css">
-    <link rel="stylesheet" href="./application/views/new/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    
-    <link rel="stylesheet" href="./application/views/newcss/style.css">
+    <?php $this->load->view('new/assets-css') ?>
   </head>
   <body>
   
   <div class="js-animsition animsition" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out">
 
-    <header class="templateux-navbar" data-aos="fade-down">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-3 col-3"><div class="site-logo"><a href="index.html" class="animsition-link">Strategy</a></div></div>
-          <div class="col-sm-9 col-9 text-right">
-
-            <button class="hamburger hamburger--spin toggle-menu ml-auto js-toggle-menu" type="button">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>  
-
-            <nav class="templateux-menu js-templateux-menu" role="navigation">
-              <ul class="list-unstyled">
-                <li class="d-md-none d-block active"><a href="index.html" class="animsition-link">Home</a></li>
-                <li><a href="work.html" class="animsition-link">Work</a></li>
-                <li><a href="about.html" class="animsition-link">About</a></li>
-                <li><a href="blog.html" class="animsition-link">Blog</a></li>
-                <li><a href="contact.html" class="animsition-link">Contact</a></li>
-              </ul>
-            </nav>  
-          </div>
-        </div>
-      </div>
-    </header>
+    <?php $this->load->view('new/header') ?>
 
     <!-- END templateux-navbar -->
     <section class="templateux-hero">
@@ -61,9 +25,9 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6" data-aos="fade-up">
-            <a class="project animsition-link" href="work-single.html">
+            <a class="project animsition-link" href="<?=base_url('work-single')?>">
               <figure>
-                <img src="images/img_1.jpg" alt="Free Template" class="img-fluid">  
+                <img src="<?=base_url()?>images2/img_1.jpg" alt="Free Template" class="img-fluid">  
               </figure>
               <div class="project-hover">
                 <div class="project-hover-inner">
@@ -74,9 +38,9 @@
             </a>
           </div>
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <a class="project animsition-link" href="work-single.html">
+            <a class="project animsition-link" href="<?=base_url('work-single')?>">
               <figure>
-                <img src="images/img_2.jpg" alt="Free Template" class="img-fluid">  
+                <img src="<?=base_url()?>images2/img_2.jpg" alt="Free Template" class="img-fluid">  
               </figure>
               <div class="project-hover">
                 <div class="project-hover-inner">
@@ -91,9 +55,9 @@
     
         <div class="row">
           <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <a class="project animsition-link" href="work-single.html">
+            <a class="project animsition-link" href="<?=base_url('work-single')?>">
               <figure>
-                <img src="images/img_3.jpg" alt="Free Template" class="img-fluid">  
+                <img src="<?=base_url()?>images2/img_3.jpg" alt="Free Template" class="img-fluid">  
               </figure>
               <div class="project-hover">
                 <div class="project-hover-inner">
@@ -104,9 +68,9 @@
             </a>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <a class="project animsition-link" href="work-single.html">
+            <a class="project animsition-link" href="<?=base_url('work-single')?>">
               <figure>
-                <img src="images/img_4.jpg" alt="Free Template" class="img-fluid">  
+                <img src="<?=base_url()?>images2/img_4.jpg" alt="Free Template" class="img-fluid">  
               </figure>
               <div class="project-hover">
                 <div class="project-hover-inner">
@@ -117,9 +81,9 @@
             </a>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <a class="project animsition-link" href="work-single.html">
+            <a class="project animsition-link" href="<?=base_url('work-single')?>">
               <figure>
-                <img src="images/img_5.jpg" alt="Free Template" class="img-fluid">  
+                <img src="<?=base_url()?>images2/img_5.jpg" alt="Free Template" class="img-fluid">  
               </figure>
               <div class="project-hover">
                 <div class="project-hover-inner">
@@ -227,7 +191,7 @@
               <div class="col-lg-12">
                 <a class="post animsition-link" href="blog-single.html" data-aos="fade-up" data-aos-delay="100">
                   <figure>
-                    <img src="images/img_1.jpg" alt="Free Template" class="img-fluid">  
+                    <img src="<?=base_url()?>images2/img_1.jpg" alt="Free Template" class="img-fluid">  
                   </figure>
                   <div class="post-hover">
                     <div class="post-hover-inner">
@@ -243,7 +207,7 @@
               <div class="col-lg-6">
                 <a class="post animsition-link" href="blog-single.html" data-aos="fade-up" data-aos-delay="200">
                   <figure>
-                    <img src="images/img_4.jpg" alt="Free Template" class="img-fluid">  
+                    <img src="<?=base_url()?>images2/img_4.jpg" alt="Free Template" class="img-fluid">  
                   </figure>
                   <div class="post-hover">
                     <div class="post-hover-inner">
@@ -256,7 +220,7 @@
               <div class="col-lg-6">
                 <a class="post animsition-link" href="blog-single.html" data-aos="fade-up" data-aos-delay="300">
                   <figure>
-                    <img src="images/img_5.jpg" alt="Free Template" class="img-fluid">  
+                    <img src="<?=base_url()?>images2/img_5.jpg" alt="Free Template" class="img-fluid">  
                   </figure>
                   <div class="post-hover">
                     <div class="post-hover-inner">
@@ -309,8 +273,7 @@
   </div>
 
   
-  <script src="./application/views/new/js/scripts-all.js"></script>
-  <script src="./application/views/new/js/main.js"></script>
+ <?php $this->load->view('new/assets-js') ?>
   
   </body>
 </html>

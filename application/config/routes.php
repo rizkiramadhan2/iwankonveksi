@@ -92,7 +92,13 @@ $route["get/api/galeri"]= 'admin/list_galeri';
 $route["delete/desain"]= 'admin/delete';
 $route["upload/desain"]= 'admin/upload_desain';
 
+//iwan musik
 $route['baru'] = 'view/v_home';
+$route['work'] = 'view/v_work';
+$route['about'] = 'view/v_about';
+$route['blog'] = 'view/v_blog';
+$route['contact'] = 'view/v_contact';
+$route['work-single'] = 'view/v_work_single';
 
 
 $route['default_controller'] = 'view';

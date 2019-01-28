@@ -126,5 +126,19 @@ date_default_timezone_set('Asia/Jakarta');
 	public function v_home(){
 		$this->load->view('new/index');
 	}
-
+	public function v_work(){
+		$this->load->view('new/work');
+	}
+	public function v_about(){
+		$this->load->view('new/about');
+	}
+	public function v_blog(){
+		$this->load->view('new/blog');
+	}
+	public function v_contact(){
+		$this->load->view('new/contact');
+	}
+	public function v_work_single(){
+		$this->load->view('new/work-single');
+	}
 }
