@@ -122,6 +122,9 @@
 							<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp ridwanadik@gmail.com
 							<br>
 							<br>
+							<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp admin@iwankonveksi.com
+							<br>
+							<br>
 							<i class="fa fa-instagram" aria-hidden="true"></i> &nbsp <a href="https://www.instagram.com/iwankonveksi/">@iwankonveksi</a>
 						</p>
 					
